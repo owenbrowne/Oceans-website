@@ -29,16 +29,20 @@ window.addEventListener('load', function() {
  */
 async function initializeChart() {
     try {
+        console.log('Starting chart initialization...');
+        
         // Fetch SST anomaly data - use relative path that works on GitHub Pages
         const response = await fetch('./data/sst_anomalies.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        console.log('Data loaded:', data.length, 'records');
 
         // Prepare chart data
         const labels = data.map(item => item.date);
         const anomalies = data.map(item => item.anomaly);
+        console.log('Labels:', labels.length, 'Anomalies:', anomalies.length);
 
         // Get canvas context
         const ctx = document.getElementById('sstChart');
@@ -46,9 +50,10 @@ async function initializeChart() {
             console.error('Chart canvas not found');
             return;
         }
+        console.log('Canvas found:', ctx);
 
         // Create chart
-        new Chart(ctx, {
+        const chartInstance = new Chart(ctx, {
             type: 'line',
             data: {
                 labels: labels,
@@ -161,7 +166,8 @@ async function initializeChart() {
             }
         });
 
-        console.log('Chart initialized successfully');
+        console.log('Chart created successfully:', chartInstance);
+        console.log('Chart has data:', chartInstance.data.datasets[0].data.length, 'points');
     } catch (error) {
         console.error('Error initializing chart:', error);
         const container = document.querySelector('.chart-container');

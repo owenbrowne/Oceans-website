@@ -282,10 +282,13 @@ strong {
     margin-bottom: 2rem;
     position: relative;
     height: 400px;
+    width: 100%;
 }
 
 .chart-container canvas {
     max-height: 100%;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* ===================================
