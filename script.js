@@ -182,6 +182,8 @@ async function initializeChart() {
  */
 async function initializeMap() {
     try {
+        console.log('Starting map initialization...');
+        
         // Initialize map
         const map = L.map('reefMap', {
             center: [0, 0],
@@ -189,6 +191,8 @@ async function initializeMap() {
             scrollWheelZoom: false, // Disable scroll-wheel zoom by default
             zoomControl: true
         });
+        
+        console.log('Map instance created');
 
         // Add zoom control hint
         map.on('click', function() {
@@ -204,11 +208,13 @@ async function initializeMap() {
         }).addTo(map);
 
         // Fetch reef location data - use relative path that works on GitHub Pages
+        console.log('Fetching reef data...');
         const response = await fetch('./data/reefs.geojson');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const reefData = await response.json();
+        console.log('Reef data loaded:', reefData.features.length, 'locations');
 
         // Define marker colors based on bleaching risk
         const riskColors = {
@@ -283,7 +289,7 @@ async function initializeMap() {
         // Add custom styles for popups
         addPopupStyles();
 
-        console.log('Map initialized successfully');
+        console.log('Map initialized successfully with', reefData.features.length, 'markers');
     } catch (error) {
         console.error('Error initializing map:', error);
         const container = document.getElementById('reefMap');
