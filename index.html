@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore how ocean warming impacts coral reefs through interactive visualizations and scientific explanations.">
+    <title>Coral Reefs & Ocean Warming | Understanding Climate Impact</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Coral Reefs & Ocean Warming</h1>
+            <p class="tagline">Understanding how rising sea temperatures threaten Earth's underwater ecosystems</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+        <img src="assets/hero.jpg" alt="Vibrant coral reef ecosystem with diverse marine life" class="hero-image">
+        <div class="hero-overlay">
+            <div class="container">
+                <h2 id="hero-heading">When Oceans Heat, Corals Suffer</h2>
+                <p>Coral reefs depend on a delicate temperature balance. When sea surface temperatures rise just 1-2°C above normal for extended periods, corals expel their symbiotic algae (zooxanthellae) and turn white—a process called <strong>coral bleaching</strong>. Without these algae, corals lose their primary food source and become vulnerable to disease and death.</p>
+                <a href="#science" class="btn-primary">Learn the Science</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Explainer Section -->
+            <section id="science" class="section explainer" aria-labelledby="explainer-heading">
+                <h2 id="explainer-heading">What is Coral Bleaching?</h2>
+                
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>Primary Drivers</h3>
+                        <ul>
+                            <li><strong>Elevated Sea Surface Temperatures (SST):</strong> The most significant cause, driven by climate change and marine heatwaves</li>
+                            <li><strong>Solar Radiation:</strong> High light levels combined with heat stress intensify bleaching</li>
+                            <li><strong>Ocean Acidification:</strong> Reduced pH from absorbed CO₂ weakens coral skeletons</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Compounding Factors</h3>
+                        <ul>
+                            <li>Pollution and nutrient runoff</li>
+                            <li>Overfishing and ecosystem imbalance</li>
+                            <li>Physical damage from storms and human activity</li>
+                            <li>Disease outbreaks in stressed populations</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Consequences</h3>
+                        <ul>
+                            <li><strong>Biodiversity Loss:</strong> Reefs support 25% of marine species</li>
+                            <li><strong>Fisheries Decline:</strong> Over 1 billion people depend on reef fish for protein</li>
+                            <li><strong>Coastal Vulnerability:</strong> Loss of natural storm protection</li>
+                            <li><strong>Economic Impact:</strong> Tourism and fishing industries affected</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <h4>Key Threshold: Degree Heating Weeks (DHW)</h4>
+                    <p>Scientists measure thermal stress using <strong>Degree Heating Weeks</strong>—the accumulated heat above the normal maximum temperature over a 12-week period. A DHW of 4°C-weeks typically triggers bleaching; 8°C-weeks or higher often causes mortality.</p>
+                </div>
+            </section>
+
+            <!-- Time Series Chart -->
+            <section class="section chart-section" aria-labelledby="chart-heading">
+                <h2 id="chart-heading">Global Sea Surface Temperature Anomalies</h2>
+                <p class="section-intro">This chart shows how ocean temperatures have deviated from historical averages. Positive anomalies indicate warming, which increasingly pushes coral reefs beyond their thermal tolerance.</p>
+                
+                <div class="chart-container">
+                    <canvas id="sstChart" role="img" aria-label="Line chart showing sea surface temperature anomalies over time"></canvas>
+                </div>
+
+                <details class="data-methods">
+                    <summary>Data & Methods</summary>
+                    <p>The data shown here is placeholder data for demonstration purposes. In a production version, this would be replaced with vetted datasets from sources such as:</p>
+                    <ul>
+                        <li><strong>NOAA Coral Reef Watch:</strong> Satellite-derived SST and DHW products</li>
+                        <li><strong>NOAA NCEI:</strong> Extended Reconstructed SST (ERSSTv5)</li>
+                        <li><strong>Copernicus Marine Service:</strong> Global Ocean reanalysis products</li>
+                    </ul>
+                    <p>Real-world data would be transformed from CSV or NetCDF formats into JSON for browser consumption.</p>
+                </details>
+            </section>
+
+            <!-- Map Section -->
+            <section class="section map-section" aria-labelledby="map-heading">
+                <h2 id="map-heading">Coral Reef Locations & Bleaching Risk</h2>
+                <p class="section-intro">Explore coral reefs around the world and their current bleaching risk levels. Click markers for more information about each location.</p>
+                
+                <div id="reefMap" class="map-container" role="application" aria-label="Interactive map of coral reef locations"></div>
+                
+                <div class="map-legend">
+                    <h4>Bleaching Risk</h4>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <span class="legend-marker" style="background-color: #3b82f6;"></span>
+                            <span>Low</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-marker" style="background-color: #f59e0b;"></span>
+                            <span>Moderate</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-marker" style="background-color: #ef4444;"></span>
+                            <span>High</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="section cta-section" aria-labelledby="cta-heading">
+                <div class="card cta-card">
+                    <h2 id="cta-heading">What You Can Do</h2>
+                    <p>Everyone can play a role in protecting coral reefs and combating ocean warming:</p>
+                    <ul class="action-list">
+                        <li><strong>Reduce Carbon Emissions:</strong> Support renewable energy, reduce personal carbon footprint, and advocate for climate policy</li>
+                        <li><strong>Support Reef Monitoring & Restoration:</strong> Contribute to organizations working on coral research, transplantation, and assisted evolution</li>
+                        <li><strong>Practice Reef-Safe Tourism:</strong> Use reef-safe sunscreen, avoid touching corals, and choose eco-certified tour operators</li>
+                        <li><strong>Reduce Ocean Pollution:</strong> Minimize plastic use, properly dispose of chemicals, and support watershed protection</li>
+                        <li><strong>Spread Awareness:</strong> Share information about reef conservation and ocean warming with your community</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Glossary -->
+            <section class="section glossary" aria-labelledby="glossary-heading">
+                <h2 id="glossary-heading">Glossary</h2>
+                <dl class="glossary-list">
+                    <dt>SST (Sea Surface Temperature)</dt>
+                    <dd>The temperature of the top layer of the ocean, typically measured at depths of 1-20 meters.</dd>
+                    
+                    <dt>DHW (Degree Heating Weeks)</dt>
+                    <dd>A measure of accumulated thermal stress, calculated as the number of degrees Celsius above the bleaching threshold, summed over a 12-week period.</dd>
+                    
+                    <dt>ENSO (El Niño-Southern Oscillation)</dt>
+                    <dd>A climate pattern involving fluctuations in ocean temperatures in the equatorial Pacific, which can trigger widespread coral bleaching during El Niño events.</dd>
+                    
+                    <dt>MHW (Marine Heatwave)</dt>
+                    <dd>Prolonged periods of anomalously warm ocean temperatures that can last weeks to months, causing severe stress to coral reefs.</dd>
+                    
+                    <dt>Calcification</dt>
+                    <dd>The process by which corals build their calcium carbonate skeletons. This process is impaired by warming waters and ocean acidification.</dd>
+                    
+                    <dt>Zooxanthellae</dt>
+                    <dd>Symbiotic algae living within coral tissue that provide up to 90% of the coral's energy through photosynthesis.</dd>
+                </dl>
+            </section>
+
+            <!-- Credits & Sources -->
+            <section class="section credits" aria-labelledby="credits-heading">
+                <h2 id="credits-heading">Credits & Sources</h2>
+                <div class="credits-content">
+                    <h3>Data Sources</h3>
+                    <ul>
+                        <li><strong>NOAA Coral Reef Watch:</strong> Satellite monitoring and bleaching alert system</li>
+                        <li><strong>ReefBase:</strong> Global database of coral reefs from WorldFish Center</li>
+                        <li><strong>NOAA National Centers for Environmental Information:</strong> Historical SST data</li>
+                        <li><strong>IPCC Reports:</strong> Climate change impacts on ocean systems</li>
+                    </ul>
+                    
+                    <h3>Images & Resources</h3>
+                    <ul>
+                        <li>Hero image: Placeholder (replace with licensed reef photography)</li>
+                        <li>Map tiles: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</li>
+                        <li>Mapping library: <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a></li>
+                        <li>Charts: <a href="https://www.chartjs.org/" target="_blank" rel="noopener">Chart.js</a></li>
+                    </ul>
+                    
+                    <h3>Further Reading</h3>
+                    <ul>
+                        <li><a href="https://coralreefwatch.noaa.gov/" target="_blank" rel="noopener">NOAA Coral Reef Watch</a></li>
+                        <li><a href="https://www.icriforum.org/" target="_blank" rel="noopener">International Coral Reef Initiative</a></li>
+                        <li><a href="https://www.coral.org/" target="_blank" rel="noopener">Coral Restoration Foundation</a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Coral Reefs & Ocean Warming. Created to raise awareness about climate impacts on marine ecosystems.</p>
+            <p class="footer-note">This is an educational project. Data shown uses placeholders for demonstration; production versions should use vetted scientific sources.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" 
+        integrity="sha256-yQ8pp6pJl9axJssKjZRVvXZ9M0sZZkfQOJJJFFPbL4s=" 
+        crossorigin="anonymous" defer></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="" defer></script>
+    <!-- Main Script -->
+    <script src="script.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,102 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.7781, -18.2871]
+      },
+      "properties": {
+        "name": "Great Barrier Reef",
+        "country": "Australia",
+        "bleaching_risk": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.5093, 4.1755]
+      },
+      "properties": {
+        "name": "Maldives Coral Reefs",
+        "country": "Maldives",
+        "bleaching_risk": "moderate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.3977, 24.7109]
+      },
+      "properties": {
+        "name": "Florida Keys",
+        "country": "United States",
+        "bleaching_risk": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.3317, -23.0410]
+      },
+      "properties": {
+        "name": "Bazaruto Archipelago",
+        "country": "Mozambique",
+        "bleaching_risk": "moderate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [166.9315, -0.5477]
+      },
+      "properties": {
+        "name": "Nauru Island Reefs",
+        "country": "Nauru",
+        "bleaching_risk": "low"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-86.8515, 20.8515]
+      },
+      "properties": {
+        "name": "Mesoamerican Barrier Reef",
+        "country": "Mexico",
+        "bleaching_risk": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.0244, -17.9389]
+      },
+      "properties": {
+        "name": "Ningaloo Reef",
+        "country": "Australia",
+        "bleaching_risk": "moderate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.4897, 7.5150]
+      },
+      "properties": {
+        "name": "Rock Islands Reefs",
+        "country": "Palau",
+        "bleaching_risk": "low"
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Ocean gradient background -->
+  <defs>
+    <linearGradient id="oceanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A4C7D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1976D2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2196F3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="coralGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8E8E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="coralGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFA07A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB399;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="coralGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE66D;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sunlight" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#0A4C7D;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Ocean background -->
+  <rect width="1920" height="1080" fill="url(#oceanGradient)"/>
+  
+  <!-- Sunlight rays from top -->
+  <rect width="1920" height="600" fill="url(#sunlight)"/>
+  
+  <!-- Ocean floor -->
+  <ellipse cx="960" cy="1100" rx="1400" ry="200" fill="#0A3D5C" opacity="0.5"/>
+  
+  <!-- Coral structures -->
+  <!-- Large coral left -->
+  <g transform="translate(300, 700)">
+    <ellipse cx="0" cy="100" rx="120" ry="180" fill="url(#coralGradient1)" opacity="0.9"/>
+    <ellipse cx="-50" cy="120" rx="80" ry="140" fill="url(#coralGradient1)" opacity="0.8"/>
+    <ellipse cx="60" cy="130" rx="70" ry="120" fill="url(#coralGradient1)" opacity="0.85"/>
+  </g>
+  
+  <!-- Medium coral center-left -->
+  <g transform="translate(600, 750)">
+    <ellipse cx="0" cy="80" rx="90" ry="150" fill="url(#coralGradient2)" opacity="0.9"/>
+    <ellipse cx="-40" cy="100" rx="60" ry="110" fill="url(#coralGradient2)" opacity="0.8"/>
+    <ellipse cx="45" cy="105" rx="55" ry="100" fill="url(#coralGradient2)" opacity="0.85"/>
+  </g>
+  
+  <!-- Large coral center-right -->
+  <g transform="translate(1100, 720)">
+    <ellipse cx="0" cy="90" rx="110" ry="170" fill="url(#coralGradient3)" opacity="0.9"/>
+    <ellipse cx="-55" cy="110" rx="75" ry="130" fill="url(#coralGradient3)" opacity="0.8"/>
+    <ellipse cx="50" cy="120" rx="65" ry="115" fill="url(#coralGradient3)" opacity="0.85"/>
+  </g>
+  
+  <!-- Medium coral right -->
+  <g transform="translate(1500, 770)">
+    <ellipse cx="0" cy="70" rx="85" ry="140" fill="url(#coralGradient1)" opacity="0.9"/>
+    <ellipse cx="-45" cy="90" rx="55" ry="100" fill="url(#coralGradient1)" opacity="0.8"/>
+    <ellipse cx="40" cy="95" rx="50" ry="90" fill="url(#coralGradient1)" opacity="0.85"/>
+  </g>
+  
+  <!-- Small coral accents -->
+  <ellipse cx="450" cy="880" rx="40" ry="70" fill="#FF6B6B" opacity="0.7"/>
+  <ellipse cx="850" cy="900" rx="35" ry="65" fill="#FFA07A" opacity="0.7"/>
+  <ellipse cx="1350" cy="890" rx="45" ry="75" fill="#FFD93D" opacity="0.7"/>
+  
+  <!-- Fish silhouettes -->
+  <g opacity="0.6">
+    <ellipse cx="700" cy="400" rx="25" ry="12" fill="#FFFFFF" opacity="0.8"/>
+    <ellipse cx="720" cy="420" rx="22" ry="11" fill="#FFFFFF" opacity="0.7"/>
+    <ellipse cx="680" cy="430" rx="20" ry="10" fill="#FFFFFF" opacity="0.75"/>
+    <ellipse cx="1200" cy="350" rx="28" ry="14" fill="#FFFFFF" opacity="0.8"/>
+    <ellipse cx="1230" cy="365" rx="25" ry="12" fill="#FFFFFF" opacity="0.7"/>
+  </g>
+  
+  <!-- Particles/bubbles -->
+  <circle cx="500" cy="600" r="8" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="550" cy="450" r="6" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="900" cy="550" r="7" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="1300" cy="500" r="9" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="1450" cy="650" r="6" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="400" cy="700" r="5" fill="#FFFFFF" opacity="0.2"/>
+  <circle cx="1600" cy="600" r="7" fill="#FFFFFF" opacity="0.25"/>
+  
+  <!-- Bottom shadow for depth -->
+  <rect y="950" width="1920" height="130" fill="url(#oceanGradient)" opacity="0.4"/>
+</svg>
+
