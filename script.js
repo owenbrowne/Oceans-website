@@ -3,9 +3,23 @@
  * Handles data visualization using Chart.js and Leaflet
  */
 
-// Wait for DOM and external libraries to load
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize visualizations
+// Wait for window to fully load (including external scripts)
+window.addEventListener('load', function() {
+    console.log('Window loaded, checking for libraries...');
+    console.log('Chart.js available:', typeof Chart !== 'undefined');
+    console.log('Leaflet available:', typeof L !== 'undefined');
+    
+    // Verify libraries are loaded before initializing
+    if (typeof Chart === 'undefined') {
+        console.error('Chart.js failed to load!');
+        return;
+    }
+    if (typeof L === 'undefined') {
+        console.error('Leaflet failed to load!');
+        return;
+    }
+    
+    console.log('Initializing visualizations...');
     initializeChart();
     initializeMap();
 });
