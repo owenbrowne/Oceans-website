@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Coral Reefs & Ocean Warming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a2332 100%);
+            color: #e4e9f2;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .wave-animation {
+            font-size: 100px;
+            margin-bottom: 2rem;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            color: #3b82f6;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 1.5rem;
+            color: #e4e9f2;
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #9ca3af;
+            margin-bottom: 2rem;
+        }
+
+        .btn-home {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            border: 2px solid #3b82f6;
+        }
+
+        .btn-home:hover {
+            background-color: #2563eb;
+            border-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-home:focus {
+            outline: 2px solid #60a5fa;
+            outline-offset: 4px;
+        }
+
+        .suggestions {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2d3748;
+        }
+
+        .suggestions h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #10b981;
+        }
+
+        .suggestions ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .suggestions li {
+            margin: 0.75rem 0;
+        }
+
+        .suggestions a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .suggestions a:hover {
+            color: #10b981;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .wave-animation {
+                font-size: 60px;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .btn-home {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wave-animation" aria-hidden="true">🌊</div>
+        
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        
+        <p>
+            Looks like this page has drifted away like a piece of coral in the current. 
+            The page you're looking for doesn't exist or may have been moved.
+        </p>
+
+        <a href="/" class="btn-home">Return to Home</a>
+
+        <div class="suggestions">
+            <h3>You might be looking for:</h3>
+            <ul>
+                <li><a href="/">Home - Ocean Warming & Coral Reefs</a></li>
+                <li><a href="/#science">Learn the Science</a></li>
+                <li><a href="/#chart">Temperature Data</a></li>
+                <li><a href="/#map">Reef Locations</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Log 404 for debugging
+        console.log('404 Error: Page not found -', window.location.href);
+    </script>
+</body>
+</html>
+
