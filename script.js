@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 async function initializeChart() {
     try {
-        // Fetch SST anomaly data
-        const response = await fetch('data/sst_anomalies.json');
+        // Fetch SST anomaly data - use relative path that works on GitHub Pages
+        const response = await fetch('./data/sst_anomalies.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -183,8 +183,8 @@ async function initializeMap() {
             maxZoom: 19
         }).addTo(map);
 
-        // Fetch reef location data
-        const response = await fetch('data/reefs.geojson');
+        // Fetch reef location data - use relative path that works on GitHub Pages
+        const response = await fetch('./data/reefs.geojson');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

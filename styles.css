@@ -377,6 +377,75 @@ strong {
 }
 
 /* ===================================
+   Comparison Section
+   =================================== */
+.comparison-section {
+    background-color: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 4rem 2rem;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.comparison-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--shadow);
+}
+
+.comparison-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.comparison-content {
+    padding: 1.5rem;
+}
+
+.comparison-content h3 {
+    color: var(--accent-primary);
+    margin-bottom: 0.75rem;
+}
+
+.comparison-content p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.comparison-note {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+    border-left: 4px solid var(--accent-danger);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.comparison-note h4 {
+    color: var(--accent-danger);
+    margin-bottom: 0.75rem;
+}
+
+.comparison-note p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+/* ===================================
    CTA Section
    =================================== */
 .cta-section {
