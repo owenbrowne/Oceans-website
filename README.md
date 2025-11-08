@@ -97,7 +97,7 @@ coral-reef-heat-site/
 └── README.md              # This file
 ```
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Core
 - **HTML5**: Semantic markup with accessibility features
@@ -109,7 +109,7 @@ coral-reef-heat-site/
 - **[Leaflet](https://leafletjs.com/) v1.9.4**: Interactive reef location map
 - **OpenStreetMap**: Map tile provider
 
-## 📊 Data Sources
+## Data Sources
 
 ### Current Status
 The site currently uses **placeholder data** for demonstration purposes:
@@ -134,17 +134,6 @@ For a production deployment, replace placeholder data with vetted sources:
 - **ReefBase**: [http://www.reefbase.org/](http://www.reefbase.org/)
   - Global coral reef database
 
-### Data Transformation
-Most scientific data comes in CSV or NetCDF formats. To use with this site:
-
-1. Download raw data
-2. Transform to JSON format:
-   - Time series: `[{ "date": "YYYY-MM", "anomaly": number }, ...]`
-   - Locations: GeoJSON FeatureCollection with Point features
-3. Replace files in `data/` directory
-
-## 🎨 Customization
-
 ### Color Theme
 Edit CSS variables in `styles.css`:
 
@@ -162,11 +151,6 @@ Edit CSS variables in `styles.css`:
 }
 ```
 
-### Hero Image
-Replace `assets/hero.jpg` with your own coral reef photograph:
-- Recommended size: 1920×1080px
-- Format: JPEG or WebP
-- Keep file size under 500KB for performance
 
 ### Chart Styling
 Modify chart configuration in `script.js` (starting around line 30):
@@ -182,111 +166,6 @@ Adjust map behavior in `script.js` (starting around line 95):
 - Marker styles
 - Popup content
 
-## ♿ Accessibility
 
-This site follows WCAG 2.1 AA standards:
 
-- ✅ Semantic HTML5 elements
-- ✅ ARIA labels for interactive elements
-- ✅ Sufficient color contrast (tested)
-- ✅ Keyboard navigation support
-- ✅ Focus visible states
-- ✅ Alt text for images
-- ✅ Responsive text sizing
-- ✅ Reduced motion support
-
-## 🧪 Testing Checklist
-
-Before deploying:
-
-- [ ] Test on Chrome, Firefox, Safari, Edge
-- [ ] Test on mobile devices (iOS and Android)
-- [ ] Verify chart loads with data
-- [ ] Verify map markers appear and popups work
-- [ ] Check all links and images load
-- [ ] Test keyboard navigation (Tab, Enter, Space)
-- [ ] Test with screen reader (if available)
-- [ ] Run Lighthouse audit (aim for 90+ scores)
-- [ ] Check console for errors
-- [ ] Verify HTTPS loads without mixed content warnings
-
-## 📈 Performance
-
-The site is optimized for performance:
-
-- No framework overhead (vanilla JS)
-- External libraries loaded from CDN (cached)
-- Minimal image assets
-- CSS with hardware-accelerated properties
-- Deferred script loading
-- Responsive images
-
-**Typical Lighthouse Scores**: 95+ Performance, 100 Accessibility, 100 Best Practices, 100 SEO
-
-## 🔮 Future Enhancements
-
-Optional features to consider:
-
-- [ ] Light/dark theme toggle
-- [ ] Additional datasets (DHW, regional anomalies)
-- [ ] Map legend with risk filtering
-- [ ] Search functionality for specific reefs
-- [ ] Social sharing buttons
-- [ ] Multi-language support
-- [ ] Animated data transitions
-- [ ] 404 error page
-- [ ] Blog/news section
-- [ ] Migration to static site generator (Astro, Eleventy)
-
-## 📝 License
-
-This project is released under the MIT License. Feel free to use, modify, and distribute.
-
-## 🤝 Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Content Contributions
-- Improved scientific explanations
-- Better data sources
-- Additional reef locations
-- Translations
-
-### Code Contributions
-- Performance improvements
-- Accessibility enhancements
-- Bug fixes
-- New visualizations
-
-## 📧 Contact & Support
-
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/coral-reef-heat-site/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/YOUR_USERNAME/coral-reef-heat-site/discussions)
-
-## 🌟 Acknowledgments
-
-- **Data Providers**: NOAA, Copernicus, ReefBase
-- **Libraries**: Chart.js, Leaflet
-- **Map Tiles**: OpenStreetMap contributors
-- **Inspiration**: Marine scientists and conservation organizations worldwide
-
-## 🔗 Related Resources
-
-- [NOAA Coral Reef Watch](https://coralreefwatch.noaa.gov/)
-- [International Coral Reef Initiative](https://www.icriforum.org/)
-- [Coral Restoration Foundation](https://www.coral.org/)
-- [Ocean Conservancy](https://oceanconservancy.org/)
-- [The Ocean Agency](https://www.theoceanagency.org/)
-
----
-
-**Made with 🌊 for coral reef conservation**
-
-*Remember: Every degree matters. Take action on climate change.*
 
